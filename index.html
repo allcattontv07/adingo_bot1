@@ -498,9 +498,9 @@
             const withdrawBtn = document.getElementById('withdraw-btn');
             const withdrawForm = document.getElementById('withdraw-form');
 
-            const DAILY_ADS_LIMIT = 50;
-            const AD_REWARD = 0.02; // BDT per ad
-            const MIN_WITHDRAW_AMOUNT = 100;
+            const DAILY_ADS_LIMIT = 1000;
+            const AD_REWARD = 0.10; // BDT per ad
+            const MIN_WITHDRAW_AMOUNT = 50;
 
             if (!localStorage.getItem('earnings')) {
                 localStorage.setItem('earnings', '0');
@@ -593,10 +593,10 @@
                 // --- অ্যাড নেটওয়ার্কের কোড কল করার জায়গা (দ্বিতীয় অংশ) ---
                 // ======================================================================
                 // এখানে আপনার অ্যাড নেটওয়ার্কের দেওয়া ফাংশনটি কল করতে হবে।
-                // নিচের 'show_9702412()' লাইনটি একটি উদাহরণ।
+                // নিচের 'show_10120086()' লাইনটি একটি উদাহরণ।
                 // ======================================================================
-                if (typeof show_9702412 === 'function') {
-                    show_9702412().then(() => {
+                if (typeof show_10120086 === 'function') {
+                    show_10120086().then(() => {
                         let earnings = parseFloat(localStorage.getItem('earnings')) + AD_REWARD;
                         let currentAdsWatched = parseInt(localStorage.getItem('adsWatched')) + 1;
                         
